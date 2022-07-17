@@ -22,7 +22,7 @@ public class EmpConstructor {
         this.empDesignation = empDesignation;
     }
     
-    // Constructor for part-time employee
+    // Constructor for a part-time employee
     public EmpConstructor(Integer id, String empType, String empName, Integer workHour, Decimal hourlyPay, String empDesignation) {
         empId = id;
         this.empType = empType;
