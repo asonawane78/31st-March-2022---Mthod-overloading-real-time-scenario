@@ -1,0 +1,69 @@
+public class EmpConstructor {
+    
+    // Employee's Data Members
+    public String empType; // full-time / part-time employee
+    public String empName;
+    public Integer empId;    
+    public String empDesignation;
+    
+    public Decimal empMonthlySalary;
+    
+    private Integer workHour; // 4
+    private Decimal hourlyPay; // 400, 600
+    
+    
+    // Constructor is used to initialize the data-members
+    // Constructor for full-time employee
+    public EmpConstructor(Integer id, String empType, String empName, Decimal empMonthlySalary, String empDesignation) {
+        empId = id;
+        this.empType = empType;
+        this.empName = empName;
+        this.empMonthlySalary = empMonthlySalary;
+        this.empDesignation = empDesignation;
+    }
+    
+    // Constructor for part-time employee
+    public EmpConstructor(Integer id, String empType, String empName, Integer workHour, Decimal hourlyPay, String empDesignation) {
+        empId = id;
+        this.empType = empType;
+        this.empName = empName;
+        this.workHour = workHour;
+        this.hourlyPay = hourlyPay;
+        this.empDesignation = empDesignation;
+    }
+    
+    public void showDetails() {       
+        System.debug('Id : ' + empId);
+        System.debug('Name : ' + empName);
+        System.debug('Designation : ' + empDesignation);
+    }
+	
+    public void salaryInfo() {        
+        // == eqauls to
+        // != not equals to
+        // < less than
+        // > greater than
+        // <= less than and equals to
+        // >= greater than and equals to
+			
+        if( empType == 'fulltime' ) { // empType = 'fulltime'
+            calculateSalary(empMonthlySalary); // empMonthlySalary = 50000
+        } else {
+            // for part-time emp
+            calculateSalary(workHour, hourlyPay);
+        }
+        
+    }
+    
+    // Method Overloading
+    // full time salary
+    private void calculateSalary(Decimal fullTimeSalary) { // fullTimeSalary = 50000
+        System.debug('Full Time Emp Salary : ' + fullTimeSalary);
+    }
+    
+    // part time salary
+    private void calculateSalary(Integer hours, Decimal payHour) {
+        Decimal partTimeSalary = hours * payHour;
+        System.debug('Part Time Emp Salary : ' + partTimeSalary);
+    }
+}

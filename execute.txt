@@ -1,0 +1,13 @@
+EmpConstructor empFull;
+empFull = new EmpConstructor(101, 'fulltime', 'Emp 1', 50000, 'Software Engineer');
+empFull.showDetails();
+empFull.salaryInfo();
+
+System.debug('---------------------------------------');
+
+EmpConstructor empPart;
+empPart = new EmpConstructor(102, 'parttime', 'Emp 2', 5, 400, 'QA Engineer');
+empPart.showDetails();
+empPart.salaryInfo();
+
+
