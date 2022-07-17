@@ -9,7 +9,7 @@ public class EmpConstructor {
     public Decimal empMonthlySalary;
     
     private Integer workHour; // 4
-    private Decimal hourlyPay; // 400, 600
+    private Decimal hourlyPay; // 400 600
     
     
     // Constructor is used to initialize the data-members
